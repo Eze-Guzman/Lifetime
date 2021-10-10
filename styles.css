@@ -1,0 +1,86 @@
+:root {
+	--page-background: #77EA90;
+	--form-background: #34E846;
+	--button-color: #00830D;
+	--form-width: 500px;
+	--radius: 6px;
+}
+
+body {
+	background-color: var(--page-background)
+}
+
+#page-content {
+	display: flex;
+}
+
+#description p {
+	font-size: 36px;
+	width: 396px;
+	height: 205px;
+}
+
+#login-form {
+	text-align: center;
+}
+
+#register-form {
+	display: none;
+}
+
+#page-content, #register-form {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+form {
+	width: var(--form-width);
+	height: fit-content;
+	background-color: var(--form-background);
+	border-radius: var(--radius);
+	padding: 20px;
+}
+
+form div {
+	display: flex;
+}
+
+form input {
+	width: -webkit-fill-available;
+	background-color: var(--form-background);
+	border: 2px solid white;
+	margin: 10px 5px;
+}
+
+form button {
+	background-color: var(--button-color);
+	border: 0;
+}
+
+form button, form input {
+	padding: 10px;
+	color: #111;
+	border-radius: var(--radius);
+}
+
+#login-button {
+	width: -webkit-fill-available;
+}
+
+#close-register-form {
+	position: absolute;
+	right: 10px;
+}
+
+#pop-up-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: white;
+	opacity: 50%;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+}
