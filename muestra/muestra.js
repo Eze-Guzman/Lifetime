@@ -12,10 +12,6 @@ function modificarHorario(dia, inicio, fin, estado, tag) {
 	}
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 function autoestablecer(dia, duracion, tag) {
 	let i = 0;
 	while (duracion > 0) {
