@@ -1,3 +1,55 @@
+<?php
+    include 'conection.php';
+		session_start();
+		/*
+    if (isset($_SESSION['dni_logeado'])) {
+        header('Location:user_index.php');
+    }
+
+    function buscar_dni_repetido($dni,$conexion){
+        $sql="SELECT * FROM usuario WHERE dni=$dni;";
+        $sel = $conexion -> query($sql);
+
+        if(mysqli_num_rows($sel)>=1){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+    if(isset($_POST['nombre'])){
+        $nombre=$_POST['nombre'];
+        $apellido=$_POST['apellido'];
+        $email=$_POST['email'];
+        $dni=$_POST['dni'];
+        $pass=md5($_POST['contraseña']);
+
+        if(buscar_dni_repetido($dni,$con)==0){
+            $consulta = "INSERT INTO `usuario` (
+                `id_u` ,
+                `nombre` ,
+                `apellido` ,
+                `dni` ,
+                `password` ,
+                `correo`
+                )
+                VALUES (
+                NULL , '$nombre', '$apellido', $dni, '$pass', '$email'
+                );";
+            $ins = $con -> query($consulta);
+            if($ins){
+                header("location:login.php");
+            }else{
+                echo('<script language="javascript">alert("Ha ocurrido un error en el registro!!");window.location.href="registro.php"</script>');
+            }
+        }else{
+            echo('<script language="javascript">alert("El DNI ingresado ya existe, por favor Ingrese otro.")</script>');
+        }
+        
+		}
+		*/
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
