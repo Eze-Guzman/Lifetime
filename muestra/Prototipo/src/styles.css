@@ -115,7 +115,7 @@ header #user-icon{
 	display: grid;
 	height: 100%;
 	grid-template-columns: repeat(4, 25%);
-	grid-template-rows: repeat(50, 2%);
+	grid-template-rows: repeat(288, 0.3472222222222222%);
 	background-color: white;
 	border: 1px solid #CCC;
 }
@@ -137,19 +137,19 @@ header #user-icon{
 }
 
 .calendar-time-00-00hs{grid-row: 1/2;}
-.calendar-separator-00-00hs{grid-row: 3/4;}
+.calendar-separator-00-00hs{grid-row: 11/12;}
 
-.calendar-time-06-00hs{grid-row: 11/12;}
-.calendar-separator-06-00hs{grid-row: 13/14;}
+.calendar-time-06-00hs{grid-row: 61/62;}
+.calendar-separator-06-00hs{grid-row: 71/72;}
 
-.calendar-time-12-00hs{grid-row: 23/24;}
-.calendar-separator-12-00hs{grid-row: 25/26;}
+.calendar-time-12-00hs{grid-row: 133/134;}
+.calendar-separator-12-00hs{grid-row: 143/144;}
 
-.calendar-time-18-00hs{grid-row: 35/36;}
-.calendar-separator-18-00hs{grid-row: 37/38;}
+.calendar-time-18-00hs{grid-row: 205/206;}
+.calendar-separator-18-00hs{grid-row: 215/216;}
 
-.calendar-time-23-59hs{grid-row: 47/48;}
-.calendar-separator-23-59hs{grid-row: 49/50;}
+.calendar-time-23-59hs{grid-row: 277/278;}
+.calendar-separator-23-59hs{grid-row: 287/288;}
 
 .modal-calendar-day{
 	width: 100%;
@@ -179,7 +179,7 @@ header #user-icon{
 	display: grid;
 	height: 100%;
 	grid-template-columns: repeat(4, 25%);
-	grid-template-rows: repeat(290, 0.34482758%);
+	grid-template-rows: repeat(288, 0.34482758%);
 	background-color: white;
 	border: 1px solid #CCC;
 	padding: 0 0 2vh 0;
@@ -202,18 +202,18 @@ header #user-icon{
 }
 
 .modal-calendar-time-00-00hs{grid-row: 1/2;}
-.modal-calendar-separator-00-00hs{grid-row: 3/4;}
+.modal-calendar-separator-00-00hs{grid-row: 11/12;}
 
-.modal-calendar-time-06-00hs{grid-row: 72/73;}
-.modal-calendar-separator-06-00hs{grid-row: 74/75;}
+.modal-calendar-time-06-00hs{grid-row: 61/62;}
+.modal-calendar-separator-06-00hs{grid-row: 71/72;}
 
-.modal-calendar-time-12-00hs{grid-row: 143/144;}
-.modal-calendar-separator-12-00hs{grid-row: 145/146;}
+.modal-calendar-time-12-00hs{grid-row: 133/134;}
+.modal-calendar-separator-12-00hs{grid-row: 143/144;}
 
-.modal-calendar-time-18-00hs{grid-row: 214/215;}
-.modal-calendar-separator-18-00hs{grid-row: 216/217;}
+.modal-calendar-time-18-00hs{grid-row: 205/206;}
+.modal-calendar-separator-18-00hs{grid-row: 216/216;}
 
-.modal-calendar-time-23-59hs{grid-row: 285/286;}
+.modal-calendar-time-23-59hs{grid-row: 277/278;}
 .modal-calendar-separator-23-59hs{grid-row: 287/288;}
 
 .modal-calendar-buttons{
@@ -247,4 +247,13 @@ header #user-icon{
 	background-color: #B5F9A4;
 }
 
-
+#modificar-horario {
+	display: none;
+	z-index: 1000;
+	width: 75vw;
+	height: 25vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}

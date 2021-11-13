@@ -53,3 +53,27 @@ function cerrarDia(){
 	document.getElementsByClassName("modal-calendar-day")[dayId].style.display = "none";
 	dayId=0;
 }
+
+function abrirElemento(id) {
+	document.getElementById(id).style.display = "block";
+}
+
+function cerrarElemento(id) {
+	document.getElementById(id).style.display = "none";
+}
+
+function agregarNuevoHorario() {
+	inicio = document.getElementById('nuevo-horario-inicio').value;
+	fin = document.getElementById('nuevo-horario-fin').value; 
+	tag = document.getElementById('nuevo-horario-tag').value;
+	color = document.getElementById('nuevo-horario-color').value;
+	modificarHorario( dayId, inicio, fin,	'ocupado', tag);
+	
+	var actividad = document.createElement("div");
+	actividad.innerHTML = " ";
+	actividad.style.backgroundColor = color;
+	actividad.style.gridRow = inicio + '/' + fin;
+	actividad.style.gridColumn = '2/3';
+	document.getElementsByClassName('calendar-day-container-routine')[dayId].appendChild(actividad);
+	cerrarElemento('modificar-horario');
+}

@@ -34,7 +34,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -106,7 +106,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -130,7 +130,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -154,7 +154,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -178,7 +178,7 @@
 						<span class="modal-calendar-separator modal-calendar-separator-23-59hs">&nbsp;</span>
 					</div>
 					<div class="modal-calendar-buttons">
-						<button class="add-btn" onclick="agregarHorarios()">Agregar horarios</button>
+						<button class="add-btn" onclick="abrirElemento('modificar-horario')">Agregar horarios</button>
 						<button class="close-btn" onclick="cerrarDia()">Cerrar</button>
 					</div>
 				</div>
@@ -309,6 +309,13 @@
 						</div>
 					</button>
 				</div>
+			</div>
+			<div id="modificar-horario">
+				<input type="number" name="inicio" id="nuevo-horario-inicio" />
+				<input type="number" name="fin" id="nuevo-horario-fin" />
+				<input type="text" name="tag" id="nuevo-horario-tag" />
+				<input type="color" name="color" id="nuevo-horario-color" />
+				<button type="button" onclick="agregarNuevoHorario()">Aceptar</button> 
 			</div>
 		</section>
 
