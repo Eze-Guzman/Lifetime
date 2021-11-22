@@ -9,8 +9,9 @@ for (i = 0; i < horarios.length; i++) {
 }
 
 function modificarHorario(dia, inicio, fin, estado, tag) {
-	for (i = inicio; i <= fin; i++) {
-		horarios[dia][i] = [{estado: estado}, {tag: tag}];
+	if(verificarOcupacion(dia, inicio, fin)){
+		for (i = inicio; i <= fin; i++)
+			horarios[dia][i] = [{estado: estado}, {tag: tag}];
 	}
 }
 
@@ -21,6 +22,14 @@ function agregarActividad(actividad) {
 
 function quitarActividad(actividad) {
 	actividades.splice(actividades.indexOf(actividad), 1)
+}
+
+function verificarOcupacion(dia, inicio, fin) {
+	for (let i = inicio; i < fin; i++)
+		if(horarios[dia][i][1].tag != "none")
+			return false;
+
+	return true;
 }
 
 function autoestablecer(dia, duracion, tag) {
@@ -67,8 +76,15 @@ function agregarNuevoHorario() {
 	fin = document.getElementById('nuevo-horario-fin').value; 
 	tag = document.getElementById('nuevo-horario-tag').value;
 	color = document.getElementById('nuevo-horario-color').value;
-	modificarHorario( dayId, inicio, fin,	'ocupado', tag);
+
+	if (!verificarOcupacion(dayId, inicio, fin))
+		return;
+	if (inicio < 1)
+		return;
+	if (fin > 288)
+		return;
 	
+	modificarHorario (dayId, inicio, fin, 'ocupado', tag);
 	var actividad = document.createElement("div");
 	actividad.innerHTML = " ";
 	actividad.style.backgroundColor = color;
